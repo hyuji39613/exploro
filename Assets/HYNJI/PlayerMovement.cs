@@ -16,9 +16,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
 
-        moveDir = new Vector3(h, v, 0);
+        moveDir = new Vector3(h, 0, 0);
         transform.position += moveDir * speed * Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
@@ -26,5 +25,14 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-    }  
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {   
+            Destroy(gameObject);
+
+        }
+       
+    }
 }
