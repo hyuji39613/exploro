@@ -22,8 +22,5 @@ public class MoveEnemy : MonoBehaviour
     {
         moveDir.x = -moveDir.x;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       
-    }
+    
 }
