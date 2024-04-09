@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private bool canJump = true;
     private Rigidbody2D rb;
+    public float jumpDelay = 1;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
             rb.AddForce(Vector2.up * jumpScale, ForceMode2D.Impulse);
-            Invoke(nameof(SetCanJump), 3);
+            Invoke(nameof(SetCanJump), jumpDelay);
         }
     }
 
