@@ -805,7 +805,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7098467506888096066, guid: 7f65eec908ff22442802371bca11b26f, type: 3}
   firePos: {fileID: 442537056}
-  ThrowDelay: 1.5
 --- !u!61 &1285018406
 BoxCollider2D:
   m_ObjectHideFlags: 0
