@@ -1,17 +1,30 @@
 using UnityEngine;
 
-public class MoveDown : MonoBehaviour
+public class BlockComponent : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    private bool isGravityApplied = false;
     public GameObject player;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0f;
+    }
+
     void Update()
-    {      
-        // x 좌표 값이 +/- 0.5 범위 내에 있는지 확인
+    {
+
         if (player.transform.position.x >= transform.position.x - 0.5 &&
-        player.transform.position.x <= transform.position.x + 0.5 && 
-        player.transform.position.y < transform.position.y)
+            player.transform.position.x <= transform.position.x + 0.5 &&
+            player.transform.position.y < transform.position.y )
         {
-            // 오브젝트 삭제
-            Destroy(gameObject);
-        }  
+            Invoke(nameof(BlockMove), 1);
+        }
+    }
+    private void BlockMove()
+    {
+        isGravityApplied = true;
+        rb.gravityScale = 1f;
     }
 }
