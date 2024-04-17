@@ -3,7 +3,6 @@ using UnityEngine;
 public class BlockComponent : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private bool isGravityApplied = false;
     public GameObject player;
 
     void Start()
@@ -24,7 +23,6 @@ public class BlockComponent : MonoBehaviour
     }
     private void BlockMove()
     {
-        isGravityApplied = true;
         rb.gravityScale = 1f;
     }
 }
