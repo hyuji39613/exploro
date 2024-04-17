@@ -503,7 +503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpScale: 5
   speed: 5
-  jumpDelay: 2
 --- !u!1 &381883815
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +518,7 @@ GameObject:
   - component: {fileID: 381883821}
   m_Layer: 0
   m_Name: DownEnemy (1)
-  m_TagString: Enemy
+  m_TagString: BlockEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1489,7 +1488,7 @@ GameObject:
   - component: {fileID: 985682305}
   m_Layer: 0
   m_Name: PlayerKillZone
-  m_TagString: Enemy
+  m_TagString: EnemyCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1736,8 +1735,8 @@ GameObject:
   - component: {fileID: 1540007857}
   - component: {fileID: 1540007856}
   m_Layer: 0
-  m_Name: EnemyKillZone
-  m_TagString: Enemy
+  m_Name: EnDest
+  m_TagString: EnemyCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
