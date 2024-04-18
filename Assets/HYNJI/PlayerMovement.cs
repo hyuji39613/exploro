@@ -39,4 +39,13 @@ public class PlayerMovement : MonoBehaviour
             canJump = true;
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+            canJump = true;
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log("CollisionExit");
+        canJump = false;
+    }
 }
