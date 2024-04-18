@@ -6,12 +6,13 @@ public class MoveEnemy : MonoBehaviour
 {
     private Vector3 moveDir;
     public float speed;
+    public float moTime;
     private Rigidbody2D rigid;
 
     private void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-        InvokeRepeating(nameof(ChangemoveDir), 2, 4);
+        InvokeRepeating(nameof(ChangemoveDir), moTime/2, moTime);
         moveDir.x = 1;
     }
     void Update()
