@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private bool canJump = true;
     private Rigidbody2D rb;
-    public float jumpDelay = 1;
 
     void Start()
     {
@@ -24,12 +23,20 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
             rb.AddForce(Vector2.up * jumpScale, ForceMode2D.Impulse);
-            Invoke(nameof(SetCanJump), jumpDelay);
+            Debug.Log("Jump");
         }
     }
-
-    private void SetCanJump()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        canJump = true;
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            rb.AddForce(Vector2.up * jumpScale, ForceMode2D.Impulse);
+            canJump = false;
+        }
+        else
+        {
+            Debug.Log("Collision");
+            canJump = true;
+        }
     }
 }
