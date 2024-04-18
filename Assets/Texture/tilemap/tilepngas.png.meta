@@ -139,15 +139,19 @@ TextureImporter:
       name: tilepngas_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 352
+        x: 144
+        y: 272
         width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 2, y: 0}
+        - {x: 2, y: 1}
+        - {x: 6, y: 1}
+        - {x: 6, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: f898041f885eecc40b5b2eae33f78be1
@@ -191,10 +195,9 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -5.9716187, y: -7.963928}
-        - {x: -5.899887, y: 1.2105408}
-        - {x: -7.7346077, y: 1.4205933}
+        - {x: -6, y: 1}
+        - {x: -8, y: 1}
         - {x: -6, y: 6}
-        - {x: -3.6368103, y: 6.1565857}
         - {x: 8, y: 6}
         - {x: 8, y: -7.771057}
       tessellationDetail: 0
@@ -219,7 +222,7 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -7.8201675, y: -7.639282}
-        - {x: -7.5607986, y: 5.8158875}
+        - {x: -8, y: 6}
         - {x: 8, y: 6}
         - {x: 8, y: -7.768982}
       tessellationDetail: 0
@@ -244,9 +247,9 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: -7.952484}
-        - {x: -7.742317, y: 5.67749}
-        - {x: 6.6741714, y: 5.5868225}
-        - {x: 7.679199, y: 4.3167725}
+        - {x: -8, y: 6}
+        - {x: 7, y: 6}
+        - {x: 8, y: 4}
         - {x: 6.045967, y: 4.1345825}
         - {x: 5.818039, y: -7.7832336}
       tessellationDetail: 0
@@ -411,9 +414,9 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -5.880478, y: -8}
-        - {x: -5.8932495, y: 1.1224365}
-        - {x: -7.7716446, y: 1.5161438}
-        - {x: -5.829712, y: 5.821045}
+        - {x: -6, y: 1}
+        - {x: -8, y: 1}
+        - {x: -6, y: 6}
         - {x: 8, y: 5.998749}
         - {x: 7.804863, y: -7.991272}
       tessellationDetail: 0
@@ -438,9 +441,9 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: -8}
-        - {x: -8, y: 5.683777}
-        - {x: 7.676262, y: 5.823303}
-        - {x: 6.7728043, y: 1.4766235}
+        - {x: -8, y: 6}
+        - {x: 8, y: 6}
+        - {x: 7, y: 1}
         - {x: 6.867119, y: -7.959961}
       tessellationDetail: 0
       bones: []
@@ -915,12 +918,9 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -4, y: -8}
-        - {x: -6, y: -8}
-        - {x: -5, y: 1}
-        - {x: 1, y: 5}
-        - {x: 6, y: 5}
-        - {x: 8, y: 5}
+      - - {x: -6, y: -8}
+        - {x: -3, y: 5}
+        - {x: 8, y: 6}
         - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
@@ -945,8 +945,7 @@ TextureImporter:
       physicsShape:
       - - {x: -8, y: -8}
         - {x: -8, y: 6}
-        - {x: 1, y: 6}
-        - {x: 8, y: 5}
+        - {x: 8, y: 6}
         - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
@@ -970,9 +969,8 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: -8}
-        - {x: -8, y: 5}
-        - {x: 2, y: 5}
-        - {x: 8, y: 5}
+        - {x: -8, y: 6}
+        - {x: 8, y: 6}
         - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
@@ -1003,58 +1001,6 @@ TextureImporter:
       bones: []
       spriteID: 5cb0a2750081d8943a3374380c46b7d5
       internalID: 2050162710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilepngas_37
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: -8}
-        - {x: -8, y: 6}
-        - {x: 2, y: 6}
-        - {x: 5, y: 5}
-        - {x: 4.830887, y: -7.7889404}
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcef9da1c72203146b9aa3672ed7a514
-      internalID: -134948125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilepngas_38
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 288
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -6, y: -8}
-        - {x: -5, y: 2}
-        - {x: 0.5959778, y: 4.612488}
-        - {x: 7.783081, y: 4.8449707}
-        - {x: 8, y: -8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a9d0c82f0ff5734b903d37b86563243
-      internalID: 2087462621
       vertices: []
       indices: 
       edges: []
@@ -1157,7 +1103,6 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -6, y: -8}
-        - {x: -6, y: -3}
         - {x: -6, y: 8}
         - {x: 8, y: 8}
         - {x: 8, y: -8}
@@ -1185,7 +1130,6 @@ TextureImporter:
       - - {x: -8, y: -8}
         - {x: -8, y: 8}
         - {x: 5, y: 8}
-        - {x: 5, y: -4}
         - {x: 5, y: -8}
       tessellationDetail: 0
       bones: []
@@ -1210,11 +1154,12 @@ TextureImporter:
       physicsShape:
       - - {x: -7.8869476, y: -8}
         - {x: -7.7792816, y: 7.826782}
-        - {x: 4.3859863, y: 7.719116}
-        - {x: 4.1807404, y: 4.9239807}
-        - {x: 7.4924316, y: 4.5558167}
+        - {x: 4, y: 8}
+        - {x: 4, y: 5}
+        - {x: 8, y: 5}
         - {x: 7.962097, y: -3.5582886}
-        - {x: 4.897888, y: -8}
+        - {x: 5, y: -4}
+        - {x: 5, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 2f92ff2c1facc1f46bcd59cae64cb778
@@ -1413,7 +1358,7 @@ TextureImporter:
       - - {x: -8, y: -8}
         - {x: -8, y: 8}
         - {x: 5, y: 8}
-        - {x: 6, y: -8}
+        - {x: 5, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 6b840526097bde54a8b36ad54ecdbc05
@@ -1536,27 +1481,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilepngas_58
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07a9183b258ba794daf6ecad6bde5910
-      internalID: 1850148573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tilepngas_59
       rect:
         serializedVersion: 2
@@ -1570,67 +1494,14 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -8, y: -8}
-        - {x: -8, y: 6}
-        - {x: -6, y: 8}
+        - {x: -8, y: 7}
+        - {x: -7, y: 8}
         - {x: 8, y: 8}
         - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 92f8d3c2e8f710e40af0a25f41a0b093
       internalID: -84023321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilepngas_60
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -7, y: -8}
-        - {x: -8, y: 8}
-        - {x: 5, y: 8}
-        - {x: 8, y: 6}
-        - {x: 8, y: -8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4591626e75d6fb04099d5ffa505e5dc2
-      internalID: -1773014722
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tilepngas_61
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -8, y: -8}
-        - {x: -8, y: 8}
-        - {x: 6, y: 8}
-        - {x: 6, y: 7}
-        - {x: 8, y: 6}
-        - {x: 8, y: -8}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4221c145be567d84e84925efcd5e0ed8
-      internalID: 748408389
       vertices: []
       indices: 
       edges: []
@@ -1678,27 +1549,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tilepngas_64
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d53136f12333e9f4f852d0703ff405ee
-      internalID: 552229235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tilepngas_65
       rect:
         serializedVersion: 2
@@ -1715,6 +1565,32 @@ TextureImporter:
       bones: []
       spriteID: 4635dcbb26f128c4680e4119899ede81
       internalID: 1061012608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilepngas_60
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 6, y: 8}
+        - {x: 8, y: 7}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604992eb0ee91084482c12157bbc44fa
+      internalID: -1773014722
       vertices: []
       indices: 
       edges: []
