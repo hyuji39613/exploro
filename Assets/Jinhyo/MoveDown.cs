@@ -24,5 +24,13 @@ public class BlockComponent : MonoBehaviour
     private void BlockMove()
     {
         rb.gravityScale = 1f;
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            BlockMove();
+        }
     }
 }

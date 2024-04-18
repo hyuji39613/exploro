@@ -7,11 +7,12 @@ TagManager:
   - Enemy
   - EnemyCollider
   - BlockEnemy
+  - Map
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Map
   - Water
   - UI
   - 
