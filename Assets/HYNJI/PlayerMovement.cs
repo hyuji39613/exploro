@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            rb.AddForce(Vector2.up * jumpScale, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpScale/2, ForceMode2D.Impulse);
             canJump = false;
         }
         else

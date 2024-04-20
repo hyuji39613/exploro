@@ -8,6 +8,8 @@ TagManager:
   - EnemyCollider
   - BlockEnemy
   - Map
+  - BreakLeft
+  - BreakRight
   layers:
   - Default
   - TransparentFX
