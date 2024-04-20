@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class BlockComponent : MonoBehaviour
+public class Block: MonoBehaviour
 {
     private Rigidbody2D rb;
     public GameObject player;
@@ -23,7 +25,7 @@ public class BlockComponent : MonoBehaviour
     }
     private void BlockMove()
     {
-        rb.gravityScale = 0.9f;
+        rb.gravityScale = 1f;
         
     }
     private void OnCollisionEnter2D(Collision2D collision)

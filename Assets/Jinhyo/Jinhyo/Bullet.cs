@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
     public bool isGoLeft = true;    
     public float speed = 5f;
