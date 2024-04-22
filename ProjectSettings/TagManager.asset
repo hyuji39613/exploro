@@ -53,6 +53,9 @@ TagManager:
   - name: Player
     uniqueID: 2144605459
     locked: 0
+  - name: FinishPoint
+    uniqueID: 2450126307
+    locked: 0
   - name: BackGround
     uniqueID: 1607560589
     locked: 0
