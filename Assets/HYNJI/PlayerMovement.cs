@@ -8,10 +8,13 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump = true;
     private Rigidbody2D rb;
     public Animator anim;
+    private SpriteRenderer sprite;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -25,11 +28,20 @@ public class PlayerMovement : MonoBehaviour
             canJump = false;
             rb.AddForce(Vector2.up * jumpScale, ForceMode2D.Impulse);
             Debug.Log("Jump");
+            anim.SetBool("Jump", true);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            anim.SetBool("Walk", true);
+            sprite.flipX = false;
+            anim.SetBool("Move", true);
         }
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            sprite.flipX = true;
+            anim.SetBool("Move", true);
+        }
+        
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -40,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Map"))
         {
-
+            anim.SetBool("Jump", false);
         }
         else
         {
@@ -52,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Map"))
         {
+            anim.SetBool("Jump", false);
         }
         else
         {
@@ -63,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Map"))
         {
-
+            anim.SetBool("Jump", false);
         }
         else
         {
