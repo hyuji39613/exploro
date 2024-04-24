@@ -18,7 +18,7 @@ public class BlockComponent : MonoBehaviour
             player.transform.position.x <= transform.position.x + 0.5 &&
             player.transform.position.y < transform.position.y )
         {
-            Invoke(nameof(BlockMove), 1);
+            BlockMove();
         }
     }
     private void BlockMove()
@@ -30,7 +30,7 @@ public class BlockComponent : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            BlockMove();
+            Invoke(nameof(BlockMove), 1);
         }
     }
 }

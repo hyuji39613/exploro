@@ -30,8 +30,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            rb.AddForce(Vector2.up * jumpScale/2, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpScale / 2, ForceMode2D.Impulse);
             canJump = false;
+        }
+        else if (collision.gameObject.CompareTag("Map"))
+        {
+
         }
         else
         {
@@ -41,11 +45,25 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Map"))
+        {
+        }
+        else
+        {
+            Debug.Log("CollisionStay");
             canJump = true;
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        Debug.Log("CollisionExit");
-        canJump = false;
+        if (collision.gameObject.CompareTag("Map"))
+        {
+
+        }
+        else
+        {
+            Debug.Log("CollisionExit");
+            canJump = false;
+        }
     }
 }
