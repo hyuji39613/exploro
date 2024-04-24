@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FInishPAnim
+  m_Name: FinishpointAnim
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -26,9 +26,9 @@ AnimationClip:
       value: {fileID: 21300000, guid: 1cf35859d172cbc41a5ff0c67bac2447, type: 3}
     - time: 0.6666667
       value: {fileID: 21300000, guid: 1c8c95993e5bcd94287d3bfc3bb8f91c, type: 3}
-    - time: 1.1666666
+    - time: 1
       value: {fileID: 21300000, guid: 8881247596e76c9489ea5f4cc8bc22d9, type: 3}
-    - time: 1.5833334
+    - time: 1.3333334
       value: {fileID: 21300000, guid: d89a2ffec11e9eb429f5597f845577a2, type: 3}
     attribute: m_Sprite
     path: 
@@ -62,7 +62,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.6666667
+    m_StopTime: 1.4166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
