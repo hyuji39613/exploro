@@ -216,7 +216,7 @@ Transform:
   m_GameObject: {fileID: 166541056}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.0205, y: -20.5311, z: -0.11698045}
+  m_LocalPosition: {x: 16.5, y: -14.5, z: -0.11698045}
   m_LocalScale: {x: 15.37523, y: 7.9206457, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1940,6 +1940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233caa7ca50fc7547b612832b04e65c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scName: Stage2
 --- !u!95 &769599674
 Animator:
   serializedVersion: 5
