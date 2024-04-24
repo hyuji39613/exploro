@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private bool canJump = true;
     private Rigidbody2D rb;
+    public Animator anim;
 
     void Start()
     {
@@ -24,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
             canJump = false;
             rb.AddForce(Vector2.up * jumpScale, ForceMode2D.Impulse);
             Debug.Log("Jump");
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            anim.SetBool("Walk", true);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
