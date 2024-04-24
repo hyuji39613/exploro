@@ -30,7 +30,7 @@ public class BlockComponent : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Invoke(nameof(BlockMove), 1);
+            Invoke(nameof(BlockMove), 0.2f);
         }
     }
 }
