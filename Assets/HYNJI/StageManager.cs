@@ -7,7 +7,7 @@ public class StageManager : MonoBehaviour
 {
     public void GameScensCtrl()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("StageCh");
         Debug.Log("StartGame");
     }
     
