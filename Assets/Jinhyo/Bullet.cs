@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public bool isGoLeft = true;    
     public float speed = 5f;
+    public GameObject Parent;
     
     // Update is called once per frame
     void Update()
@@ -25,7 +26,11 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                
+            }
+            else Destroy(gameObject);
         }
     }
 }
