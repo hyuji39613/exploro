@@ -23,22 +23,26 @@ public class PlayerMovement : MonoBehaviour
         moveDir = new Vector2(h, 0);
         transform.position += (Vector3)moveDir * speed * Time.deltaTime;
 
+        if (h != 0)
+        {
+            if (h < 0)
+            {
+                sprite.flipX = false;
+                anim.SetBool("Move", true);
+            }
+            else
+            {
+                sprite.flipX = true;
+                anim.SetBool("Move", true);
+            }
+        }
+        else anim.SetBool("Move", false);
         if (Input.GetKeyDown(KeyCode.Space) && canJump)
         {
             canJump = false;
             rb.AddForce(Vector2.up * jumpScale, ForceMode2D.Impulse);
             Debug.Log("Jump");
             anim.SetBool("Jump", true);
-        }
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            sprite.flipX = false;
-            anim.SetBool("Move", true);
-        }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            sprite.flipX = true;
-            anim.SetBool("Move", true);
         }
         
 
@@ -52,36 +56,39 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Map"))
         {
-            anim.SetBool("Jump", false);
+            
         }
         else
         {
             Debug.Log("Collision");
             canJump = true;
+            anim.SetBool("Jump", false);
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Map"))
         {
-            anim.SetBool("Jump", false);
+            
         }
         else
         {
             Debug.Log("CollisionStay");
             canJump = true;
+            anim.SetBool("Jump", false);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Map"))
         {
-            anim.SetBool("Jump", false);
+            
         }
         else
         {
             Debug.Log("CollisionExit");
             canJump = false;
+            anim.SetBool("Jump", true);
         }
     }
 }
