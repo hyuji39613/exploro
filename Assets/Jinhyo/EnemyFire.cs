@@ -6,11 +6,12 @@ public class EnemyFirep : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject firePos;
-    public float ThrowDelay = 1f;
+    public float throwDelay = 1f;
+    public float startDelay = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating(nameof(Fire), ThrowDelay, ThrowDelay);
+        InvokeRepeating(nameof(Fire), startDelay, throwDelay);
     }
 
     

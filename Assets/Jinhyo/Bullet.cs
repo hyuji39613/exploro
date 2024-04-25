@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public GameObject GameOverUi;
     public bool isGoLeft = true;    
     public float speed = 5f;
+    public GameObject Parent;
     
     // Update is called once per frame
     void Update()
@@ -21,11 +23,16 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
+            GameOverUi.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {
-            Destroy(gameObject);
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                
+            }
+            else Destroy(gameObject);
         }
     }
 }
