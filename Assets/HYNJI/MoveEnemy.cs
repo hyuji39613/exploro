@@ -9,6 +9,7 @@ public class MoveEnemy : MonoBehaviour
     public float moTime;
     private Rigidbody2D rigid;
     private SpriteRenderer sprite;
+    int flipCount = 0;
 
     private void Awake()
     {
@@ -23,24 +24,18 @@ public class MoveEnemy : MonoBehaviour
     void Update()
     {
         transform.position += moveDir * speed * Time.deltaTime;
-
+        if (flipCount % 2 == 0)
+        {
+            sprite.flipX = false;
+        }
+        else sprite.flipX = true;
 
     }
     private void ChangemoveDir()
     {
         moveDir.x = -moveDir.x;
+        flipCount++;
+        
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("BreakLeft"))
-        {
-            sprite.flipX = false;
-        }
-        if (collision.gameObject.CompareTag("BreakRight"))
-        {
-            sprite.flipX = true;
-
-        }
-
-    }
+    
 }

@@ -5,29 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
+    public static bool stage1Clear = false;
+    public static bool stage2Clear = false;
     public void GotoCh()
     {
         SceneManager.LoadScene("StageCh");
-        Debug.Log("StartGame");
     }
     public void Goto1()
     {
         SceneManager.LoadScene("Stage1");
-        Debug.Log("StartGame");
     }
     public void Goto2()
     {
-        SceneManager.LoadScene("Stage2");
-        Debug.Log("StartGame");
+        if (stage1Clear)
+        {
+            SceneManager.LoadScene("Stage2");
+        }   
     }
     public void Goto3()
     {
-        SceneManager.LoadScene("Stage3");
-        Debug.Log("StartGame");
+        if (stage2Clear)
+        {
+            SceneManager.LoadScene("Stage3");
+        }
     }
     public void GotoStart()
     {
         SceneManager.LoadScene("Start");
-        Debug.Log("StartGame");
+    }
+    private void Update()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Stage2")
+        {
+            stage1Clear = true;
+        }
     }
 }

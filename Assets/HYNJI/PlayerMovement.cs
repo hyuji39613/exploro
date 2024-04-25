@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     public Animator anim;
     private SpriteRenderer sprite;
+    public GameObject GameOverUi;
+    bool isPc = true;
 
     void Start()
     {
@@ -20,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float h = Input.GetAxis("Horizontal");
-        moveDir = new Vector2(h, 0);
+        if (isPc) moveDir = new Vector2(h, 0);
+        else moveDir = new Vector2(0, 0);
         transform.position += (Vector3)moveDir * speed * Time.deltaTime;
 
         if (h != 0)
@@ -44,7 +47,13 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Jump");
             anim.SetBool("Jump", true);
         }
-        
+        if (gameObject.name == "asd")
+        {
+            isPc = false;
+            gameObject.name = "Player";
+            anim.SetBool("Destory", true); 
+            Invoke(nameof(PcDel), 1);
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,6 +66,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpScale / 2, ForceMode2D.Impulse);
             canJump = false;
+        }
+        else if (collision.gameObject.CompareTag("DelColli"))
+        {
+            GameOverUi.SetActive(true);
+            Time.timeScale = 0;
         }
         else if (collision.gameObject.CompareTag("Map"))
         {
@@ -94,5 +108,10 @@ public class PlayerMovement : MonoBehaviour
             canJump = false;
             anim.SetBool("Jump", true);
         }
+    }
+    private void PcDel()
+    {
+        GameOverUi.SetActive(true);
+        Time.timeScale = 0;
     }
 }
