@@ -751,6 +751,7 @@ MonoBehaviour:
   jumpScale: 5.7
   speed: 5
   anim: {fileID: 0}
+  GameOverUi: {fileID: 584389854}
 --- !u!95 &324473396
 Animator:
   serializedVersion: 5
@@ -1048,7 +1049,7 @@ GameObject:
   - component: {fileID: 554627349}
   m_Layer: 0
   m_Name: PlayerKillZone (1)
-  m_TagString: EnemyCollider
+  m_TagString: DelColli
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2458,7 +2459,7 @@ GameObject:
   - component: {fileID: 985682305}
   m_Layer: 0
   m_Name: PlayerKillZone
-  m_TagString: EnemyCollider
+  m_TagString: DelColli
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

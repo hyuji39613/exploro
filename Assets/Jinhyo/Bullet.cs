@@ -23,8 +23,8 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameOverUi.SetActive(true);
-            Time.timeScale = 0;
+
+            collision.gameObject.name = "asd";
         }
         else
         {
