@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Finish : MonoBehaviour
 {
     public string scName;
+    GameObject stageMa;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
