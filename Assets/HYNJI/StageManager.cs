@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -39,6 +37,10 @@ public class StageManager : MonoBehaviour
         if (scene.name == "Stage2")
         {
             stage1Clear = true;
+        }
+        if (scene.name == "Stage3")
+        {
+            stage2Clear = true;
         }
     }
 }
