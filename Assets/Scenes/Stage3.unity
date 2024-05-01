@@ -18011,7 +18011,7 @@ MonoBehaviour:
   jumpScale: 6.2
   speed: 4
   anim: {fileID: 0}
-  GameOverUi: {fileID: 0}
+  GameOverUi: {fileID: 37284259}
 --- !u!61 &1554176584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18448,8 +18448,6 @@ SceneRoots:
   - {fileID: 747912419}
   - {fileID: 18190307}
   - {fileID: 13996130}
-  - {fileID: 1479970774}
-  - {fileID: 659099815}
   - {fileID: 348782701}
   - {fileID: 791282614}
   - {fileID: 1533772190}
