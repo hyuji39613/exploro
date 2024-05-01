@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject GameOverUi;
     public bool isGoLeft = true;    
     public float speed = 5f;
     public GameObject Parent;

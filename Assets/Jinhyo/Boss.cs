@@ -6,7 +6,11 @@ public class Boss : MonoBehaviour
 {
     private Rigidbody2D rigid;
     private SpriteRenderer spRen;
-    public GameObject Pl;
+    public GameObject pl;
+    public GameObject BossFirePos;
+    public GameObject bulletfrepab;
+    float cuTime = 0;
+    float creTime = 1;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -18,21 +22,23 @@ public class Boss : MonoBehaviour
     }
     void Update()
     {
-        if (Pl.transform.position.y <= -7)
+        if (pl.transform.position.y <= -7)
         {
             rigid.gravityScale = 1;
-            
+            cuTime += Time.deltaTime;
+            if (cuTime > creTime)
+            {
+                cuTime = 0;
+                GameObject bullet = Instantiate(bulletfrepab);
+                bullet.transform.position = BossFirePos.transform.position;
+                creTime = UnityEngine.Random.Range(1, 3);
+            }
         }
-        if (Pl.transform.position.x - transform.position.x < 0)
-        {
-            spRen.flipX = true;
-        }
-        else spRen.flipX = false;
 
     }
     private void Jump() 
     {
-        if (Pl.transform.position.y <= -7)
+        if (pl.transform.position.y <= -7)
         {
             rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
         }
