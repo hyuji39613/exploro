@@ -34,7 +34,7 @@ public class Boss : MonoBehaviour
     {
         if (Pl.transform.position.y <= -7)
         {
-            rigid.AddForce(Vector2.up * 25, ForceMode2D.Impulse);
+            rigid.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
         }
     }
 }
