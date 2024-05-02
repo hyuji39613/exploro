@@ -17470,6 +17470,7 @@ MonoBehaviour:
   pl: {fileID: 1554176581}
   BossFirePos: {fileID: 1012896360}
   bulletfrepab: {fileID: 5547748286240141185, guid: 19b3ad07b2dedac41be1cd4360858bb0, type: 3}
+  bulletfrepab2: {fileID: 0}
 --- !u!50 &1289848069
 Rigidbody2D:
   serializedVersion: 4
