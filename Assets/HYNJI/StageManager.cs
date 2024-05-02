@@ -52,6 +52,7 @@ public class StageManager : MonoBehaviour
         if (scene.name == "Stage3")
         {
             stage2Clear = true;
+            stage1Clear = true;
         }
     }
 }
