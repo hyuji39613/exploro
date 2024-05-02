@@ -5,6 +5,7 @@ public class StageManager : MonoBehaviour
 {
     public static bool stage1Clear = false;
     public static bool stage2Clear = false;
+    public GameObject ui;
     public void GotoCh()
     {
         SceneManager.LoadScene("StageCh");
@@ -30,6 +31,16 @@ public class StageManager : MonoBehaviour
     public void GotoStart()
     {
         SceneManager.LoadScene("Start");
+    }
+    public void Stop()
+    {
+        Time.timeScale = 0;
+        ui.SetActive(true);
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        ui.SetActive(false);
     }
     private void Update()
     {
