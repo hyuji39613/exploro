@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour
     public GameObject BossFirePos;
     public GameObject bulletfrepab; 
     public GameObject bulletfrepab2;
+    public GameObject timeUi;
     Vector2 dir;
     float cuTime = 0;
     float creTime = 1;
@@ -28,6 +29,7 @@ public class Boss : MonoBehaviour
     {
         if (pl.transform.position.y <= -7)
         {
+            timeUi.SetActive(true);
             rigid.gravityScale = 1;
             cuTime += Time.deltaTime;
             cuTime2 += Time.deltaTime;
