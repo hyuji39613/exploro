@@ -10,6 +10,7 @@ public class Boss : MonoBehaviour
     public GameObject BossFirePos;
     public GameObject bulletfrepab; 
     public GameObject bulletfrepab2;
+    Vector2 dir;
     float cuTime = 0;
     float creTime = 1;
     float cuTime2 = 0;
@@ -45,13 +46,20 @@ public class Boss : MonoBehaviour
                 creTime2 = UnityEngine.Random.Range(1, 3);
             }
         }
-
+        if (pl.transform.position.x > transform.position.x)
+        {
+            spRen.flipX = false;
+        }
+        else spRen.flipX = true;
     }
     private void Jump() 
     {
         if (pl.transform.position.y <= -7)
         {
             rigid.AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+            dir = (pl.transform.position - transform.position).normalized;
+            dir.y = 0;
+            rigid.AddForce(dir * Time.deltaTime * 5, ForceMode2D.Impulse);
         }
     }
 }
