@@ -6,6 +6,11 @@ public class StageManager : MonoBehaviour
     public static bool stage1Clear = false;
     public static bool stage2Clear = false;
     public GameObject ui;
+    private bool soundOn = true;
+    public GameObject voOn;
+    public GameObject voOff;
+    public GameObject stop;
+    public GameObject resume;
     public void GotoCh()
     {
         SceneManager.LoadScene("StageCh");
@@ -36,11 +41,30 @@ public class StageManager : MonoBehaviour
     {
         Time.timeScale = 0;
         ui.SetActive(true);
+        stop.SetActive(false);
+        resume.SetActive(true);
     }
     public void Resume()
     {
         Time.timeScale = 1;
         ui.SetActive(false);
+        resume.SetActive(false);
+        stop.SetActive(true);
+    }
+    public void SoundChange()
+    {
+        if (soundOn) 
+        {
+            voOn.SetActive(false);
+            voOff.SetActive(true);
+        }
+        else
+        {
+            voOn.SetActive(true);
+            voOff.SetActive(false);
+        }
+        soundOn = !soundOn;
+        AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
     }
     private void Update()
     {
