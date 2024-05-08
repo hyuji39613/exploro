@@ -12,18 +12,15 @@ public class ClearTime : MonoBehaviour
     private float timer;
     void Update()
     {
-        if (pl.transform.position.y <= -7 && overUi.active != true)
+        if (pl.transform.position.y <= -7 )
         {
             timer += Time.deltaTime;
             Debug.Log(timer);
             TimeUi.text = "time : "+ Mathf.Floor((30f - timer));
-            if (timer > 3f)
+            if (timer > 30f)
             {
                 clearUi.SetActive(true);
                 Time.timeScale = 0;
-            }
-            else if (overUi.active == true)
-            {
             }
         }
     }

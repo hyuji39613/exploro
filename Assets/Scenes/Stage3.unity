@@ -3470,7 +3470,6 @@ GameObject:
   - component: {fileID: 839032065}
   - component: {fileID: 839032064}
   - component: {fileID: 839032067}
-  - component: {fileID: 839032066}
   m_Layer: 5
   m_Name: Time
   m_TagString: Untagged
@@ -3490,7 +3489,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 82483913}
+  m_Father: {fileID: 1680151207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3510,7 +3509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5345911, g: 0.5345911, b: 0.5345911, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3519,8 +3518,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
-    m_FontStyle: 0
+    m_FontSize: 75
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
@@ -3539,21 +3538,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839032062}
   m_CullTransparentMesh: 1
---- !u!114 &839032066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839032062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73de05ee7569d1c4e80c957dbebfca50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pl: {fileID: 1554176581}
-  clearUi: {fileID: 0}
-  TimeUi: {fileID: 839032064}
 --- !u!114 &839032067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3644,7 +3628,7 @@ Transform:
   m_GameObject: {fileID: 965431594}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.5, y: -3.5, z: 0}
+  m_LocalPosition: {x: 53.7, y: -3.7, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3791,8 +3775,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pl: {fileID: 1554176581}
-  clearUi: {fileID: 0}
-  TimeUi: {fileID: 0}
+  clearUi: {fileID: 2084988681}
+  overUi: {fileID: 550311861}
+  TimeUi: {fileID: 839032064}
 --- !u!4 &1237911071
 Transform:
   m_ObjectHideFlags: 0
@@ -5266,9 +5251,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 839032063}
   - {fileID: 550311862}
   - {fileID: 2032371117}
   - {fileID: 82483913}
+  - {fileID: 2084988682}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6246,11 +6233,11 @@ Transform:
   m_GameObject: {fileID: 1928009903}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.7, y: -3.5, z: 0}
+  m_LocalPosition: {x: -966.5, y: -544.5, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 82483913}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2003361174
 GameObject:
@@ -27151,6 +27138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2084988682}
+  - component: {fileID: 2084988683}
   m_Layer: 0
   m_Name: ClearUi
   m_TagString: Untagged
@@ -27175,6 +27163,18 @@ Transform:
   - {fileID: 2115788223}
   m_Father: {fileID: 1680151207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2084988683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084988681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620cd2e5045800443ab8538c1dc9e6d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2115788222
 GameObject:
   m_ObjectHideFlags: 0
@@ -27323,7 +27323,6 @@ SceneRoots:
   - {fileID: 1289848067}
   - {fileID: 1681427318}
   - {fileID: 1237911071}
-  - {fileID: 1928009905}
   - {fileID: 965431596}
   - {fileID: 1701819869}
   - {fileID: 1680151207}
