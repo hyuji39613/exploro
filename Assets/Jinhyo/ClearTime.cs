@@ -17,15 +17,13 @@ public class ClearTime : MonoBehaviour
             timer += Time.deltaTime;
             Debug.Log(timer);
             TimeUi.text = "time : "+ Mathf.Floor((30f - timer));
-            if (timer > 30f)
+            if (timer > 3f)
             {
                 clearUi.SetActive(true);
                 Time.timeScale = 0;
-                gameObject.SetActive(false);
             }
             else if (overUi.active == true)
             {
-                gameObject.SetActive(false);
             }
         }
     }
