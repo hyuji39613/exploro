@@ -7,19 +7,25 @@ public class ClearTime : MonoBehaviour
 {
     public GameObject pl;
     public GameObject clearUi;
+    public GameObject overUi;
     public Text TimeUi;
     private float timer;
     void Update()
     {
-        if (pl.transform.position.y <= -7)
+        if (pl.transform.position.y <= -7 && overUi.active != true)
         {
             timer += Time.deltaTime;
             Debug.Log(timer);
-            TimeUi.text = Mathf.Floor((60f - timer) / 60f) + " : " + Mathf.Floor((60f - timer) % 60f);
-            if (timer > 60f)
+            TimeUi.text = "time : "+ Mathf.Floor((30f - timer));
+            if (timer > 30f)
             {
                 clearUi.SetActive(true);
                 Time.timeScale = 0;
+                gameObject.SetActive(false);
+            }
+            else if (overUi.active == true)
+            {
+                gameObject.SetActive(false);
             }
         }
     }

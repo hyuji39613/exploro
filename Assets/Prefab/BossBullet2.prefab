@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGoLeft: 1
-  speed: 10
+  speed: 7.5
   Parent: {fileID: 0}
 --- !u!50 &5803152922056360510
 Rigidbody2D:
