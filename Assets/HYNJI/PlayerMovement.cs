@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject GameOverUi;
     bool isPc = true;
 
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -113,5 +114,6 @@ public class PlayerMovement : MonoBehaviour
     {
         GameOverUi.SetActive(true);
         Time.timeScale = 0;
+
     }
 }

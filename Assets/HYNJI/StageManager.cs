@@ -11,6 +11,12 @@ public class StageManager : MonoBehaviour
     public GameObject voOff;
     public GameObject stop;
     public GameObject resume;
+    public AudioSource bgm;
+
+    private void Awake()
+    {
+        bgm = GetComponentInChildren<AudioSource>();
+    }
     public void GotoCh()
     {
         SceneManager.LoadScene("StageCh");
@@ -43,6 +49,8 @@ public class StageManager : MonoBehaviour
         ui.SetActive(true);
         stop.SetActive(false);
         resume.SetActive(true);
+        bgm.Pause();
+
     }
     public void Resume()
     {
@@ -50,6 +58,8 @@ public class StageManager : MonoBehaviour
         ui.SetActive(false);
         resume.SetActive(false);
         stop.SetActive(true);
+        bgm.Play();
+
     }
     public void SoundChange()
     {
@@ -57,11 +67,13 @@ public class StageManager : MonoBehaviour
         {
             voOn.SetActive(false);
             voOff.SetActive(true);
+           
         }
         else
         {
             voOn.SetActive(true);
             voOff.SetActive(false);
+            bgm.Play();
         }
         soundOn = !soundOn;
         AudioListener.volume = AudioListener.volume == 0 ? 1 : 0;
@@ -77,6 +89,11 @@ public class StageManager : MonoBehaviour
         {
             stage2Clear = true;
             stage1Clear = true;
+        }
+
+        if(Time.timeScale == 0)
+        {
+            bgm.Stop();
         }
     }
 }
