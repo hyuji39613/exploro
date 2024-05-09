@@ -17,7 +17,7 @@ public class ClearTime : MonoBehaviour
             timer += Time.deltaTime;
             Debug.Log(timer);
             TimeUi.text = "time : "+ Mathf.Floor((30f - timer));
-            if (timer > 3f)
+            if (timer > 30f)
             {
                 clearUi.SetActive(true);
                 Time.timeScale = 0;
