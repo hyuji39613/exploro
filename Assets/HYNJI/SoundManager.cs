@@ -14,9 +14,4 @@ public class SoundManager : MonoBehaviour
     {
         bgm.Play();
     }
-
-    private void Update()
-    {
-        
-    }
 }

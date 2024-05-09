@@ -11,8 +11,14 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     public GameObject GameOverUi;
     bool isPc = true;
+    public AudioSource audioSource;
 
-    
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -112,5 +118,10 @@ public class PlayerMovement : MonoBehaviour
         GameOverUi.SetActive(true);
         Time.timeScale = 0;
 
+    }
+
+    public void PcDestoryAnim()
+    {
+        audioSource.Play();
     }
 }
