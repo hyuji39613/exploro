@@ -13,6 +13,7 @@ public class StageManager : MonoBehaviour
     public GameObject resume;
     public AudioSource bgm;
 
+    
     private void Awake()
     {
         bgm = GetComponentInChildren<AudioSource>();
