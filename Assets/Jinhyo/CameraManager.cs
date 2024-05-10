@@ -23,7 +23,7 @@ public class CameraManager : MonoBehaviour
     {
         if (player.transform.position.y <= -7 && mainCamera.orthographicSize < 10)
         {
-            vCam.m_Lens.OrthographicSize += 0.01f ;
+            vCam.m_Lens.OrthographicSize += 0.1f ;
         }
     }
 }

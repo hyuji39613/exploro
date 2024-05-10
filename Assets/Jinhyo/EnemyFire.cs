@@ -20,4 +20,12 @@ public class EnemyFirep : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab);
         bullet.transform.position = firePos.transform.position;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(transform.gameObject);
+        }
+    }
 }

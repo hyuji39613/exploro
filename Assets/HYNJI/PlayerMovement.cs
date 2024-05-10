@@ -115,8 +115,9 @@ public class PlayerMovement : MonoBehaviour
     }
     private void PcDel()
     {
-        GameOverUi.SetActive(true);
         Time.timeScale = 0;
+        GameOverUi.SetActive(true);
+        
 
     }
 
