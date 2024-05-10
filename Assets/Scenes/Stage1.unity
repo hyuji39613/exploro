@@ -181,7 +181,7 @@ MonoBehaviour:
   jumpScale: 6.2
   speed: 4
   anim: {fileID: 0}
-  GameOverUi: {fileID: 0}
+  GameOverUi: {fileID: 1500740848}
   audioSource: {fileID: 94792430}
 --- !u!61 &94792426
 BoxCollider2D:
